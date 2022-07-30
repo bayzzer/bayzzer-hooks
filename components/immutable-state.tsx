@@ -50,7 +50,7 @@ export const ImmutableState = () => {
         setTodos(draft => {
             draft.test.value = `${Math.random()}`
         })
-    }       
+    }
 
     return (
         <>
@@ -60,7 +60,11 @@ export const ImmutableState = () => {
                 <button onClick={mutableUseState}>Mutable useState</button>
             </div>
             <pre style={{ color: '#ce7ad3' }}>
-                <code>{JSON.stringify(todos, null, 2)}</code>
+                <code>
+                    {
+                        JSON.stringify(todos, null, 2)
+                    }
+                </code>
             </pre>
         </>
     )
