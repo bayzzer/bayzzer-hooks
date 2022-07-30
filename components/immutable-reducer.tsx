@@ -37,7 +37,7 @@ export const ImmutableReducer = () => {
     }
     const immutable = new ImmutableManage().create
 
-    const [state, dispatch] = useImmutableReducer(immutable, _base)   
+    const [state, dispatch] = useImmutableReducer(immutable, _base)
 
     const immutableUseReducer = () => {
         //Immutable operation
@@ -63,8 +63,12 @@ export const ImmutableReducer = () => {
                 <button onClick={mutableUseReducer}>Mutable useReducer</button>
             </div>
             <pre style={{ color: '#ce7ad3' }}>
-                <code>{JSON.stringify(state, null, 2)}</code>
-            </pre>            
+                <code>
+                    {
+                        JSON.stringify(state, null, 2)
+                    }
+                </code>
+            </pre>
         </>
     )
 }
