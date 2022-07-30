@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "dist", 
+    "baseUrl": ".",
+    "paths": {     
+      "@bayzzer/commons": ["commons/index"], 
+      "@bayzzer/hooks": ["hooks/index"]
+    },
+    "lib": ["es2015"],
+    "target": "ES6",
+    "strict": true,
+    "declaration": true,
+    "importHelpers": false,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "allowJs": true,
+    "jsx": "react-jsx"
+  },
+  "exclude": [
+    "node_modules",
+    "stories",
+    "dist",
+    "gulpfile.js"
+  ]
+}

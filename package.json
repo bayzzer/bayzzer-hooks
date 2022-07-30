@@ -1,0 +1,76 @@
+{
+  "name": "bayzzer-hooks",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "homepage": "https://bayzzer.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bayzzer/bayzzer-hooks"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/node": "^16.11.41",
+    "@types/react": "^18.0.14",
+    "bayzzer-tools": "^1.2.5",
+    "react": "^18.2.0",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "dev": "start-storybook -p 7002",
+    "build": "npm run clean && tsc && tsc-alias && gulp minify",
+    "build-sb": "build-storybook",
+    "clean": "rimraf dist"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/manager-webpack4": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
+    "copyfiles": "^2.4.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.3",
+    "storybook-dark-mode": "^1.1.0",
+    "tsc-alias": "^1.6.11",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "uglify-js": "^3.16.2"
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
+}
