@@ -21,7 +21,7 @@
   "dependencies": {
     "@types/node": "^16.11.41",
     "@types/react": "^18.0.14",
-    "bayzzer-tools": "^1.2.5",
+    "bayzzer-tools": "^1.2.6",
     "react": "^18.2.0",
     "typescript": "^4.7.4"
   },
