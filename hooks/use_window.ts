@@ -7,7 +7,7 @@ interface WindowProperties {
     isServer: boolean | HTMLElement
 }
 
-export function useWindowSize(): WindowProperties {
+export function useWindow(): WindowProperties {
 
     const isDOM = typeof window !== 'undefined' &&
         window.document &&
@@ -29,7 +29,7 @@ export function useWindowSize(): WindowProperties {
     }
 
     useEventListener('resize', handleSize)
-    
+
     useIsomorphicLayoutEffect(() => {
         handleSize()
     }, [])
