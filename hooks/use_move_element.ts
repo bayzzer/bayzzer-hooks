@@ -23,8 +23,8 @@ export const useMoveElement = <T extends HTMLElement>(elementRef?: RefObject<T>)
         if (mousedown) {
             var element = elementRef.current as HTMLElement
             element.style.position = "absolute"
-            element.style.left = `${event.clientX + x}px`
-            element.style.top = `${event.clientY + y}px`
+            element.style.marginLeft = `${event.clientX + x}px`
+            element.style.marginTop = `${event.clientY + y}px`
         }
     }, elementRef!)
 }
