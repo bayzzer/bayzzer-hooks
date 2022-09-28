@@ -18,6 +18,10 @@ export const useMoveElement = <T extends HTMLElement>(elementRef?: RefObject<T>)
         mousedown = false
     }, elementRef!)
 
+    useEventListener('mouseleave', () => {
+        mousedown = false      
+    }, elementRef!)
+
     useEventListener('mousemove', (event) => {
         if (!elementRef) return
         if (mousedown) {
@@ -25,6 +29,7 @@ export const useMoveElement = <T extends HTMLElement>(elementRef?: RefObject<T>)
             element.style.position = "absolute"
             element.style.marginLeft = `${event.clientX + x}px`
             element.style.marginTop = `${event.clientY + y}px`
+            element.style.bottom = 'auto'
         }
-    }, elementRef!)
+    }, elementRef!)    
 }
