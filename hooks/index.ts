@@ -1,4 +1,3 @@
-export * from './types'
 export * from './use_immutable_reducer'
 export * from './use_immutable_state'
 export * from './use_window'
